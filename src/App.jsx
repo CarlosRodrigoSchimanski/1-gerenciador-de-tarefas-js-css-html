@@ -21,11 +21,27 @@ function App() {
       status: false
     }
   ])
+
+  function onTaskClick(taskId){
+    const updatedTasks = tasks.map(task => {
+      if(task.id === taskId){
+        return {...task, status:!task.status}
+      }
+      return task
+    })
+    setTasks(updatedTasks)
+  }
+
+  function onTaskDelete(taskId){
+    const updatedTasks = tasks.filter(task => task.id!== taskId)
+    setTasks(updatedTasks)
+  }
+
   return(
     <div className='w-screen h-screen bg-slate-800 flex justify-center p-6'>
       <div className='w-[500px]'>
         <h1 className='text-center text-3xl font-bold text-lime-300'>Gerenciador de tarefas </h1>
-        <Tasks tasks={tasks}/>
+        <Tasks tasks={tasks} onTaskClick={onTaskClick} onTaskDelete={onTaskDelete}/>
       </div>
       
     </div>
