@@ -28,4 +28,4 @@ function Tasks(props) {
     );
 }
 
-export default Tasks;
+export default Tasks
