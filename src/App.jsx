@@ -7,19 +7,19 @@ function App() {
     {
       id:1,
       title:'Estudar programação',
-      descripition: 'Estudar programação para se tornar um desenvolvedor',
+      description: 'Estudar programação para se tornar um desenvolvedor',
       status: false
     },
     {
       id:2,
       title:'Tomar café',
-      descripition: 'Tomar um café para relaxar',
+      description: 'Tomar um café para relaxar',
       status: false
     },
     {
       id:3,
       title:'Estudar JavaScript',
-      descripition: 'Estudar JavaScript para aprender a programar',
+      description: 'Estudar JavaScript para aprender a programar',
       status: false
     }
   ])
@@ -39,12 +39,12 @@ function App() {
     setTasks(updatedTasks)
   }
 
-  //criar uma função que receba o title e a descrição de uma tarefa e que coloque nela um id unico e um status por padrao false
-  function onAddTask(title, descripition){
+  
+  function onAddTask(title, description){
     const newTask = {
       id:v4(),
       title,
-      descripition,
+      description,
       status: false
     }
     setTasks([...tasks, newTask])
@@ -60,8 +60,6 @@ function App() {
     })
     setTasks(updatedTasks)
   }*/
-
-  //criar uma função que receba um id e atualize o status de uma tarefa
 
   return(
     <div className='w-screen h-screen bg-slate-600 flex justify-center p-6'>
